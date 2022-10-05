@@ -19,3 +19,12 @@ string[] CreatArray()
 
     return newArray;
 }
+
+void ShowArray (string[] Array)
+{
+    Console.Write("[");
+    for(int i = 0; i<Array.Length; i++)
+        Console.Write(Array[i] + ", ");
+      Console.Write("\b\b]");
+    Console.WriteLine();
+}
