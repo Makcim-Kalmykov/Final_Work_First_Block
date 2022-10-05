@@ -4,4 +4,18 @@
 // %%%          выполнения алгоритма. Обойтись исключительно массивами.                                             %%%
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+string[] CreatArray()
+{
+    Console.Write("Enter the desired number of lines: ");
+    int size = Convert.ToInt32(Console.ReadLine());
 
+    string[] newArray = new string[size];
+
+    for (int i = 0; i < newArray.Length; i++)
+    {
+        Console.Write("Input any number of characters in the string: ");
+        newArray[i] = Convert.ToString(Console.ReadLine());
+    }
+
+    return newArray;
+}
