@@ -20,11 +20,38 @@ string[] CreatArray()
     return newArray;
 }
 
-void ShowArray (string[] Array)
+void ShowArray(string[] Array)
 {
     Console.Write("[");
-    for(int i = 0; i<Array.Length; i++)
+    for (int i = 0; i < Array.Length; i++)
         Console.Write(Array[i] + ", ");
-      Console.Write("\b\b]");
+    Console.Write("\b\b]");
     Console.WriteLine();
 }
+
+string[] SelectionArray(string[] array, int longString)
+{
+    int count = 0;
+
+    for (int i = 0; i < array.Length; i++)
+        if (array[i].Length <= longString & array[i].Length > 0)
+            count++;
+
+    string[] newArray = new string[count];
+
+    for (int i = 0, j = 0; i < array.Length; i++)
+        if (array[i].Length <= longString & array[i].Length > 0)
+        {
+            newArray[j] = array[i];
+            j++;
+        }
+
+        return newArray;
+}
+
+
+
+string[] arrayNew = CreatArray();
+ShowArray(arrayNew);
+string[] selectionArray = SelectionArray(arrayNew, 3); // 3 - длинна строки в 3 символа из учловия задачи
+ShowArray(selectionArray);
