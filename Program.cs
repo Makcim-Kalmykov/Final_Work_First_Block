@@ -53,5 +53,5 @@ string[] SelectionArray(string[] array, int longString)
 
 string[] arrayNew = CreatArray();
 ShowArray(arrayNew);
-string[] selectionArray = SelectionArray(arrayNew, 3); // 3 - длинна строки в 3 символа из учловия задачи
+string[] selectionArray = SelectionArray(arrayNew, 3); // 3 - длинна строки в 3 символа из уcловия задачи
 ShowArray(selectionArray);
